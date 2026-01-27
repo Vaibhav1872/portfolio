@@ -1,0 +1,142 @@
+/* About.css */
+
+.about-section {
+  width: 100%;
+}
+
+.about-content {
+  display: flex;
+  align-items: flex-start;
+  gap: 50px;
+  margin-top: 40px;
+}
+
+.about-text {
+  flex: 3;
+}
+
+.about-text p {
+  margin-bottom: 20px;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: var(--text-gray);
+}
+
+.about-text strong {
+  color: var(--accent);
+}
+
+/* Highlights List */
+.about-highlights ul {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  list-style: none;
+  margin-top: 30px;
+}
+
+.about-highlights li {
+  position: relative;
+  padding-left: 20px;
+  font-size: 0.95rem;
+  color: var(--text-gray);
+}
+
+.about-highlights li::before {
+  content: "▹";
+  position: absolute;
+  left: 0;
+  color: var(--accent);
+}
+
+/* --- RESUME BUTTON STYLING --- */
+.about-btn-container {
+  margin-top: 40px;
+}
+
+.resume-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 16px 28px;
+  border: 1px solid var(--accent);
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  border-radius: 4px;
+  background: transparent;
+  transition: all 0.3s ease;
+}
+
+.resume-btn:hover {
+  background: rgba(100, 255, 218, 0.1);
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(100, 255, 218, 0.2);
+}
+
+.btn-icon {
+  font-size: 0.85rem;
+}
+
+/* Image Styling */
+.about-image-container {
+  flex: 2;
+  display: flex;
+  justify-content: center;
+}
+
+.image-wrapper {
+  position: relative;
+  max-width: 300px;
+  border-radius: 15px;
+  border: 2px solid var(--accent); /* Added a border to make the image stand out */
+}
+
+.profile-img {
+  width: 100%;
+  border-radius: 12px;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.profile-img:hover {
+  transform: scale(1.02);
+}
+
+/* --- RESPONSIVE OPTIMIZATION (Mobile & Tabs) --- */
+
+@media (max-width: 992px) {
+  .about-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .about-highlights ul {
+    justify-content: center;
+    max-width: 500px;
+    margin: 30px auto;
+  }
+
+  .about-text p {
+    font-size: 1rem;
+  }
+
+  .about-image-container {
+    order: -1; /* Image appears above text on tablets */
+    margin-bottom: 40px;
+  }
+}
+
+@media (max-width: 500px) {
+  .about-highlights ul {
+    grid-template-columns: 1fr; /* Single column on phones */
+    text-align: left;
+  }
+  
+  .resume-btn {
+    width: 100%; /* Full width button on small phones */
+    justify-content: center;
+  }
+}

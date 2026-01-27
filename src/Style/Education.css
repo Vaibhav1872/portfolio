@@ -1,0 +1,81 @@
+/* Style/Education.css */
+
+.education-section {
+  background: transparent !important;
+}
+
+.education-container {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  width: 100%;
+  max-width: 800px;
+  margin-top: 20px;
+  /* Added bottom margin to push away the next heading */
+  margin-bottom: 30px; 
+}
+
+.education-card {
+  background: rgba(23, 42, 71, 0.8);
+  border-radius: 12px;
+  padding: 25px;
+  position: relative;
+  transition: transform 0.3s ease;
+  border: 1px solid rgba(100, 255, 218, 0.1);
+  overflow: hidden;
+}
+
+.education-card::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 5px;
+  background: var(--accent);
+}
+
+.education-card:hover {
+  transform: translateX(10px);
+  background: rgba(100, 255, 218, 0.05);
+}
+
+/* --- GAP FIX: Specific Spacing for Projects Heading --- */
+.projects-section-title {
+  /* This creates the physical gap you need */
+  margin-top: 80px !important; 
+}
+
+.card-content h3 {
+  color: var(--text-white);
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+}
+
+.institution {
+  color: var(--accent);
+  font-weight: 600;
+  font-size: 1.1rem;
+  margin-bottom: 5px;
+}
+
+.duration, .grade {
+  color: var(--text-gray);
+  font-size: 1rem;
+}
+
+/* Responsive adjustment for mobile */
+@media (max-width: 768px) {
+  .education-card {
+    padding: 20px;
+  }
+  
+  .card-content h3 {
+    font-size: 1.2rem;
+  }
+
+  .projects-section-title {
+    /* Adjusted gap for mobile screens */
+    margin-top: 50px !important; 
+  }
+}

@@ -1,0 +1,94 @@
+/* src/Style/Projects.css */
+
+.projects-section {
+  width: 100%;
+}
+
+.projects-container {
+  display: flex;
+  flex-direction: column; /* Shows projects one by one vertically */
+  gap: 40px; /* Space between each project block */
+  width: 100%;
+  margin-top: 30px;
+}
+
+.project-card {
+  background: rgba(23, 42, 71, 0.8); /* Theme-matching dark navy */
+  border-radius: 15px;
+  padding: 40px; /* Generous padding for a detailed look */
+  border: 1px solid rgba(100, 255, 218, 0.1);
+  width: 100%;
+  max-width: 1000px; /* Keeps the text readable on wide screens */
+  transition: all 0.3s ease;
+}
+
+.project-card:hover {
+  border-color: var(--accent);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+}
+
+.project-category {
+  color: var(--accent); /* Cyan #64ffda highlight */
+  font-size: 0.8rem;
+  letter-spacing: 2px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.project-card h3 {
+  color: var(--text-white);
+  font-size: 1.8rem;
+  margin: 10px 0;
+}
+
+.project-tech {
+  color: var(--accent);
+  font-size: 0.95rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+  opacity: 0.8;
+}
+
+.project-bullets {
+  margin: 0 0 30px 20px;
+  color: #a8b2d1;
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+.project-bullets li {
+  margin-bottom: 12px;
+}
+
+.project-bullets li::marker {
+  color: var(--accent);
+}
+
+/* Updated View Details Button */
+.view-btn {
+  display: inline-block;
+  padding: 12px 28px;
+  background: transparent;
+  color: var(--accent);
+  border: 1px solid var(--accent);
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.view-btn:hover {
+  background: rgba(100, 255, 218, 0.1);
+  transform: translateY(-3px);
+}
+
+/* Mobile responsive scaling */
+@media (max-width: 768px) {
+  .project-card {
+    padding: 25px;
+  }
+  
+  .project-card h3 {
+    font-size: 1.5rem;
+  }
+}

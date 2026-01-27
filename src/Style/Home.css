@@ -1,0 +1,182 @@
+/* src/Style/Home.css */
+
+.home {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 0 5%;
+  background: transparent !important;
+  position: relative;
+  z-index: 1;
+}
+
+.home-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  gap: 20px;
+}
+
+.home-left {
+  flex: 1;
+  text-align: left;
+  max-width: 1000px;
+}
+
+.home-image {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.ai-img {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 20px;
+  box-shadow: 0 0 40px rgba(100, 255, 218, 0.15);
+  animation: float 4s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
+}
+
+.name {
+  white-space: nowrap;
+  font-size: clamp(40px, 6vw, 85px);
+  color: #ffffff;
+  font-weight: 800;
+  line-height: 1.1;
+  margin: 10px 0;
+}
+
+.intro {
+  font-size: 1.6rem;
+  color: #fff;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.highlight {
+  color: #ff5e00;
+}
+
+.typing-container {
+  font-size: clamp(22px, 2.5vw, 34px);
+  color: #fff;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+
+.animated-text {
+  color: #9b59b6;
+}
+
+.home-btns {
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+}
+
+.about-btn {
+  background: #25064d;
+  color: #fff;
+  padding: 14px 35px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  transition: 0.3s;
+}
+
+.social-icons {
+  display: flex;
+  gap: 15px;
+}
+
+.social-icons a {
+  width: 45px;
+  height: 45px;
+  background: #0e0e0e;
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  transition: 0.3s;
+}
+
+.social-icons a:hover {
+  transform: translateY(-5px);
+  background: var(--accent);
+  color: #0b1120;
+}
+
+/* --- FINAL MOBILE FIX TO PREVENT NAVBAR OVERLAP --- */
+
+@media (max-width: 768px) {
+  .home {
+    /* Increased padding and used flex-start to give navbar space */
+    padding: 100px 5% 40px; 
+    height: auto;
+    min-height: 100vh;
+    display: flex;
+    align-items: flex-start; 
+  }
+
+  .home-container {
+    flex-direction: column;
+    gap: 25px;
+    text-align: center;
+    /* This margin creates the physical gap below the navbar */
+    margin-top: 40px; 
+  }
+
+  .home-image {
+    order: -1;
+    justify-content: center;
+    width: 100%;
+    /* Safety margin for the image container */
+    margin-bottom: 10px; 
+  }
+
+  .ai-img {
+    /* Shrunk slightly to ensure it doesn't touch the top */
+    max-width: 220px; 
+    margin: 0 auto;
+    animation: float-mobile 4s ease-in-out infinite;
+  }
+
+  .name {
+    font-size: 2.2rem;
+    white-space: normal;
+    line-height: 1.2;
+    margin: 15px 0;
+  }
+
+  .intro { font-size: 1.1rem; }
+  .typing-container { font-size: 1.3rem; }
+
+  .home-btns {
+    align-items: center;
+    gap: 25px;
+  }
+
+  .social-icons {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+}
+
+/* Reduced animation height so it doesn't float into the navbar area */
+@keyframes float-mobile {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}

@@ -1,0 +1,131 @@
+/* src/Style/index.css */
+
+/* 1. Global Reset & Box Sizing */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; 
+}
+
+/* 2. Professional Theme Variables */
+:root {
+  --bg-color: #0b1120;   
+  --bg-light: #172a45;   
+  --accent: #64ffda;     
+  --text-white: #e6f1ff; 
+  --text-gray: #8892b0;
+  /* Global navbar height variable */
+  --navbar-height: 100px; 
+}
+
+/* 3. Base Body Styles */
+body {
+  font-family: 'Inter', -apple-system, sans-serif;
+  background-color: var(--bg-color); 
+  color: var(--text-gray);
+  line-height: 1.6;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* 4. Transparency Fix for Particles */
+#root, .App, main {
+  background-color: transparent !important;
+  width: 100%; 
+}
+
+/* 5. UPDATED Layout Utilities - FIXED SCROLL ALIGNMENT */
+section {
+  /* Every section lands perfectly below the navbar */
+  scroll-margin-top: var(--navbar-height); 
+  
+  /* Increased top padding to accommodate fixed headers */
+  padding: 20px 10%; 
+  width: 100%;
+  max-width: 1400px;  
+  margin: 0 auto;     
+  min-height: auto; 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start; 
+  background-color: transparent !important;
+}
+
+/* Home FIX: Removed padding-top: 0 to maintain navbar gap */
+#home {
+  scroll-margin-top: 0;
+  min-height: 100vh;
+  /* Resets to standard section padding to stay below navbar */
+}
+
+.heading {
+  font-size: clamp(2.2rem, 5vw, 3rem);
+  color: var(--text-white);
+  margin-bottom: 40px; 
+  position: relative;
+  text-align: left; 
+}
+
+.heading span {
+  color: var(--accent);
+}
+
+.skills-container, .work-grid, .education-container, .experience-container {
+  width: 100%;
+  max-width: 1000px; 
+}
+
+/* 6. Professional Button Styling */
+.cta-btn {
+  display: inline-block;
+  padding: 18px 28px;
+  border: 1px solid var(--accent);
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 500;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  background: transparent;
+  width: fit-content;
+}
+
+.cta-btn:hover {
+  background: rgba(100, 255, 218, 0.1);
+  transform: translateY(-3px);
+}
+
+/* 7. Scrollbar Customization */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-color);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--bg-light);
+  border-radius: 10px;
+}
+
+/* 8. Mobile Responsiveness */
+@media (max-width: 768px) {
+  :root {
+    --navbar-height: 80px; /* Reduced height for mobile view */
+  }
+
+  section {
+    padding: 60px 5%; 
+    scroll-margin-top: var(--navbar-height); 
+  }
+
+  .heading {
+    font-size: 1.8rem;
+    margin-bottom: 30px;
+  }
+}

@@ -1,0 +1,68 @@
+/* Footer.css */
+
+.footer {
+  background-color: var(--bg-color); /* Matches your deep dark blue theme */
+  padding: 50px 20px;
+  text-align: center;
+  border-top: 1px solid rgba(255, 100, 100, 0.1); /* Subtle accent border */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Social Media Icon Container */
+.socials {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  margin-bottom: 10px;
+}
+
+/* Social Media Icons */
+.socials a {
+  color: var(--text-gray);
+  font-size: 1.8rem; /* Large icons for easy clicking on mobile */
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+}
+
+.socials a:hover {
+  color: var(--accent); /* Professional cyan highlight on hover */
+  transform: translateY(-5px);
+}
+
+/* Footer Text Styling */
+.footer p {
+  color: var(--text-gray);
+  font-size: 0.9rem;
+  margin: 5px 0;
+}
+
+.footer .email {
+  color: var(--text-white);
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+
+/* Responsive Adjustments for Mobile and Tablets */
+@media (max-width: 768px) {
+  .footer {
+    padding: 40px 15px;
+  }
+  
+  .socials {
+    gap: 20px;
+  }
+
+  .socials a {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer p {
+    font-size: 0.8rem;
+  }
+}

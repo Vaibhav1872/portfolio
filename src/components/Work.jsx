@@ -30,7 +30,7 @@ const Projects = () => {
       category: "E-COMMERCE PLATFORM",
       tech: "Laravel, PHP, Blade, MySQL",
       points: [
-        "Designed a user-friendly clothing catalog using Laravel Blade templates for server-side rendering.",
+        "Designed a user-friendly clothing clothing catalog using Laravel Blade templates for server-side rendering.",
         "Implemented secure product management features allowing admins to update inventory and categories.",
         "Optimized responsive design to ensure a seamless shopping experience across mobile and desktop devices."
       ],
@@ -40,7 +40,9 @@ const Projects = () => {
 
   return (
     <section id="work" className="projects-section">
+      {/* This heading should only exist ONCE here */}
       <h2 className="heading">Projects <span>Built</span></h2>
+      
       <div className="projects-container">
         {projects.map((project, index) => (
           <div key={index} className="project-card">

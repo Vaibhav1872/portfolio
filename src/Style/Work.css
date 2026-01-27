@@ -1,34 +1,44 @@
-/* src/Style/Projects.css */
+/* src/Style/Work.css */
 
 .projects-section {
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centers the Heading */
+  padding: 80px 5%;    /* Matches Contact.css padding */
+  overflow-x: hidden;
 }
 
 .projects-container {
   display: flex;
-  flex-direction: column; /* Shows projects one by one vertically */
-  gap: 40px; /* Space between each project block */
+  flex-direction: column;
+  align-items: center; /* Centers the Project Cards */
+  gap: 40px; 
   width: 100%;
+  max-width: 1100px;  /* Matches Contact.css max-width */
   margin-top: 30px;
 }
 
 .project-card {
-  background: rgba(23, 42, 71, 0.8); /* Theme-matching dark navy */
+  background: rgba(23, 42, 71, 0.8);
   border-radius: 15px;
-  padding: 40px; /* Generous padding for a detailed look */
+  padding: 40px;
   border: 1px solid rgba(100, 255, 218, 0.1);
-  width: 100%;
-  max-width: 1000px; /* Keeps the text readable on wide screens */
+  width: 100%;        /* Spans the 1100px container */
+  box-sizing: border-box; /* Ensures padding doesn't push width over 100% */
   transition: all 0.3s ease;
 }
 
 .project-card:hover {
   border-color: var(--accent);
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+  transform: translateY(-5px); /* Added subtle lift on hover */
 }
 
+/* --- Project Content Styling --- */
+
 .project-category {
-  color: var(--accent); /* Cyan #64ffda highlight */
+  color: var(--accent);
   font-size: 0.8rem;
   letter-spacing: 2px;
   font-weight: 700;
@@ -54,17 +64,25 @@
   color: #a8b2d1;
   font-size: 1.05rem;
   line-height: 1.7;
+  list-style-type: none; /* Removing default dots for custom marker */
+  padding: 0;
 }
 
 .project-bullets li {
   margin-bottom: 12px;
+  position: relative;
+  padding-left: 20px;
 }
 
-.project-bullets li::marker {
+.project-bullets li::before {
+  content: "▹"; /* Matching the About page style */
+  position: absolute;
+  left: 0;
   color: var(--accent);
 }
 
-/* Updated View Details Button */
+/* --- Button Styling --- */
+
 .view-btn {
   display: inline-block;
   padding: 12px 28px;
@@ -82,8 +100,13 @@
   transform: translateY(-3px);
 }
 
-/* Mobile responsive scaling */
+/* --- Mobile responsive scaling --- */
+
 @media (max-width: 768px) {
+  .projects-section {
+    padding: 60px 20px;
+  }
+
   .project-card {
     padding: 25px;
   }

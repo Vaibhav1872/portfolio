@@ -26,13 +26,6 @@ const Education = () => {
         </div>
 
       </div>
-
-      {/* NEW: Projects Heading with a specific gap class */}
-      <h2 className="heading projects-section-title">
-        Projects <span>Built</span>
-      </h2>
-      
-      {/* Your Projects Content will go here */}
       
     </section>
   );

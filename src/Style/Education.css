@@ -2,16 +2,22 @@
 
 .education-section {
   background: transparent !important;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centers the Heading */
+  padding: 80px 5%;    /* Matches Contact.css padding */
+  overflow-x: hidden;
 }
 
 .education-container {
   display: flex;
   flex-direction: column;
+  align-items: center; /* Centers the Education Cards */
   gap: 25px;
   width: 100%;
-  max-width: 800px;
+  max-width: 1100px;  /* Matches Contact.css max-width */
   margin-top: 20px;
-  /* Added bottom margin to push away the next heading */
   margin-bottom: 30px; 
 }
 
@@ -23,6 +29,8 @@
   transition: transform 0.3s ease;
   border: 1px solid rgba(100, 255, 218, 0.1);
   overflow: hidden;
+  width: 100%;        /* Spans the 1100px container */
+  box-sizing: border-box; /* Ensures padding stays inside the width */
 }
 
 .education-card::before {
@@ -42,7 +50,6 @@
 
 /* --- GAP FIX: Specific Spacing for Projects Heading --- */
 .projects-section-title {
-  /* This creates the physical gap you need */
   margin-top: 80px !important; 
 }
 
@@ -66,6 +73,10 @@
 
 /* Responsive adjustment for mobile */
 @media (max-width: 768px) {
+  .education-section {
+    padding: 60px 20px; /* Consistent mobile padding */
+  }
+
   .education-card {
     padding: 20px;
   }
@@ -75,7 +86,6 @@
   }
 
   .projects-section-title {
-    /* Adjusted gap for mobile screens */
     margin-top: 50px !important; 
   }
 }

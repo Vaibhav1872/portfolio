@@ -9,8 +9,12 @@ const Skills = () => {
     { name: "Bootstrap", icon: "https://img.icons8.com/color/48/bootstrap.png" },
     { name: "TailwindCSS", icon: "https://img.icons8.com/color/48/tailwind_css.png" },
     { name: "JavaScript", icon: "https://img.icons8.com/color/48/javascript--v1.png" },
+    /* Added TypeScript */
+    { name: "TypeScript", icon: "https://img.icons8.com/color/48/typescript.png" },
     { name: "jQuery", icon: "https://img.icons8.com/ios-filled/48/0078ff/jquery.png" },
     { name: "ReactJS", icon: "https://img.icons8.com/external-tal-revivo-color-tal-revivo/48/external-react-a-javascript-library-for-building-user-interfaces-logo-color-tal-revivo.png" },
+    /* Added Angular */
+    { name: "Angular", icon: "https://img.icons8.com/color/48/angularjs.png" },
     { name: "Redux", icon: "https://img.icons8.com/color/48/redux.png" },
     { name: "NextJS", icon: "https://img.icons8.com/color/48/nextjs.png" },
     { name: "React Native", icon: "https://img.icons8.com/external-tal-revivo-color-tal-revivo/48/external-react-a-javascript-library-for-building-user-interfaces-logo-color-tal-revivo.png" },
@@ -18,7 +22,11 @@ const Skills = () => {
     { name: "NodeJS", icon: "https://img.icons8.com/color/48/nodejs.png" },
     { name: "ExpressJS", icon: "https://img.icons8.com/color/48/express-js.png" },
     { name: "PHP", icon: "https://img.icons8.com/officel/48/php-logo.png" },
+    /* Added Laravel */
+    { name: "Laravel", icon: "https://img.icons8.com/fluency/48/laravel.png" },
     { name: "Spring Boot", icon: "https://img.icons8.com/color/48/spring-logo.png" },
+    /* Added Hibernate */
+    { name: "Hibernate", icon: "https://img.icons8.com/color/48/hibernate.png" },
     { name: "Microservices", icon: "https://img.icons8.com/color/48/api-settings.png" },
     { name: "Prisma", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/prisma/prisma-original.svg" },
     { name: "MySQL", icon: "https://img.icons8.com/color/48/mysql-logo.png" },

@@ -26,13 +26,24 @@ const Projects = () => {
       demo: "#"
     },
     {
-      title: "Clothy",
-      category: "E-COMMERCE PLATFORM",
-      tech: "Laravel, PHP, Blade, MySQL",
+      title: "Clothy (E-Commerce)",
+      category: "FULL-STACK PLATFORM",
+      tech: "Java, Spring Boot, React.js, Oracle, Rest API",
       points: [
-        "Designed a user-friendly clothing clothing catalog using Laravel Blade templates for server-side rendering.",
-        "Implemented secure product management features allowing admins to update inventory and categories.",
-        "Optimized responsive design to ensure a seamless shopping experience across mobile and desktop devices."
+        "Developed a user-friendly clothing platform with authentication, product catalogs, and secure checkout features.",
+        "Built robust REST APIs for users, products, cart, and orders to ensure seamless data flow.",
+        "Created an Admin panel with CRUD operations for managing products and users, integrated with an Oracle database schema."
+      ],
+      demo: "#"
+    },
+    {
+      title: "WebReach Backlinking",
+      category: "SEO & CMS PLATFORM",
+      tech: "WordPress, PHP, MySQL, SEO, Google Analytics, Cloudflare",
+      points: [
+        "Developed a content-driven WordPress site with optimized theme customization and backlinking strategies.",
+        "Implemented advanced SEO strategies including sitemap configuration and performance optimization to boost search rankings.",
+        "Configured hosting, domain management, and Cloudflare security while integrating Google Analytics and Search Console for traffic monitoring."
       ],
       demo: "#"
     }
@@ -40,7 +51,6 @@ const Projects = () => {
 
   return (
     <section id="work" className="projects-section">
-      {/* This heading should only exist ONCE here */}
       <h2 className="heading">Projects <span>Built</span></h2>
       
       <div className="projects-container">

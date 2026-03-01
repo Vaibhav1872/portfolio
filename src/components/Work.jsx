@@ -3,6 +3,19 @@ import '../Style/Work.css';
 
 const Projects = () => {
   const projects = [
+    
+      {
+      title: "Forever Apparel / Clothy (E-Commerce)",
+      category: "FULL-STACK PLATFORM",
+      tech: "Java, Spring Boot, React.js, Oracle, Rest API",
+      points: [
+        "Developed a user-friendly clothing platform with authentication, product catalogs, and secure checkout features.",
+        "Built robust REST APIs for users, products, cart, and orders to ensure seamless data flow.",
+        "Created an Admin panel with CRUD operations for managing products and users, integrated with an Oracle database schema."
+      ],
+      demo: "#"
+    }
+    ,
     {
       title: "Library Management System",
       category: "FULL-STACK PROJECT",
@@ -25,17 +38,7 @@ const Projects = () => {
       ],
       demo: "#"
     },
-    {
-      title: "Clothy (E-Commerce)",
-      category: "FULL-STACK PLATFORM",
-      tech: "Java, Spring Boot, React.js, Oracle, Rest API",
-      points: [
-        "Developed a user-friendly clothing platform with authentication, product catalogs, and secure checkout features.",
-        "Built robust REST APIs for users, products, cart, and orders to ensure seamless data flow.",
-        "Created an Admin panel with CRUD operations for managing products and users, integrated with an Oracle database schema."
-      ],
-      demo: "#"
-    },
+
     {
       title: "WebReach Backlinking",
       category: "SEO & CMS PLATFORM",
